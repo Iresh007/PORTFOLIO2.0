@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "title": "Iresh Agrawal | Senior Data Engineer",
+    "description": "Senior Data Engineer with {{yearsSincePlus:careerStartYear}} years on Azure Databricks, Snowflake, and Data Vault 2.0. Databricks & DP-203 certified.",
+    "language": "en",
+    "themeColor": "#102a43",
+    "url": "https://iresh007.github.io/Portfolio/",
+    "ogImage": "/og-image.jpg",
+    "keywords": "Senior Data Engineer, Azure Databricks, Snowflake, Data Vault 2.0, Medallion Architecture, Azure Data Factory, PySpark, Unity Catalog, ADF, ETL, ELT, CI/CD, Data Engineering",
+    "author": "Iresh Agrawal",
+    "robots": "index, follow",
+    "ogType": "website",
+    "ogSiteName": "Iresh Agrawal Portfolio",
+    "locale": "en_US",
+    "favicon": "/favicon.svg",
+    "profileImage": "/profile.jpg",
+    "twitterCard": "summary_large_image"
+  },
+  "structuredData": {
+    "enabled": true,
+    "employer": {
+      "name": "EXL Services",
+      "type": "Organization"
+    },
+    "address": {
+      "locality": "India",
+      "country": "IN"
+    },
+    "knowsAbout": [
+      "Azure Databricks",
+      "Snowflake",
+      "Data Vault 2.0",
+      "Medallion Architecture",
+      "Azure Data Factory",
+      "PySpark",
+      "Unity Catalog",
+      "SQL"
+    ]
+  },
+  "branding": {
+    "name": "IA",
+    "logo": null,
+    "showName": true
+  },
+  "navigation": {
+    "links": [
+      {
+        "href": "#hero",
+        "label": "About",
+        "external": false
+      },
+      {
+        "href": "#impact",
+        "label": "Impact",
+        "external": false
+      },
+      {
+        "href": "#experience",
+        "label": "Experience",
+        "external": false
+      },
+      {
+        "href": "#achievements",
+        "label": "Achievements",
+        "external": false
+      },
+      {
+        "href": "#skills",
+        "label": "Skills",
+        "external": false
+      },
+      {
+        "href": "#certifications",
+        "label": "Certifications",
+        "external": false
+      },
+      {
+        "href": "#contact",
+        "label": "Contact",
+        "external": false
+      }
+    ],
+    "cta": {
+      "text": "Let's Talk",
+      "href": "#contact"
+    }
+  },
+  "social": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/iresh-agrawal23",
+      "label": "LinkedIn"
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/iresh007",
+      "label": "GitHub"
+    },
+    {
+      "platform": "email",
+      "value": "iresh.agrawal23@gmail.com",
+      "label": "Email"
+    }
+  ],
+  "analytics": {
+    "vercel": false,
+    "googleAnalytics": null,
+    "plausible": null
+  },
+  "features": {
+    "darkMode": true,
+    "designSystemSwitcher": true,
+    "smoothScroll": true,
+    "reduceMotion": "respect-system",
+    "layout": "cards"
+  }
+}

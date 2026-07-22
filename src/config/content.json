@@ -1,0 +1,536 @@
+{
+  "variables": {
+    "careerStartYear": 2022.5
+  },
+  "sections": [
+    "hero",
+    "metrics",
+    "experience",
+    "achievements",
+    "skills",
+    "certifications",
+    "contact"
+  ],
+  "hero": {
+    "name": "Iresh Agrawal",
+    "title": "Senior Data Engineer",
+    "tagline": "{{yearsSincePlus:careerStartYear}} years building cloud data platforms on Azure Databricks, Snowflake, and Azure Data Factory — specializing in Data Vault 2.0 and Medallion Architecture, from greenfield builds to large-scale migrations.",
+    "avatar": "/profile.jpg",
+    "cta": {
+      "primary": {
+        "text": "View Experience",
+        "target": "#experience"
+      },
+      "secondary": {
+        "text": "Get in Touch",
+        "target": "#contact"
+      }
+    },
+    "statusBadge": {
+      "text": "Open to Relocation",
+      "active": true
+    },
+    "valuePills": [
+      {
+        "label": "Data Vault 2.0",
+        "sublabel": "Hubs, Links & Satellites",
+        "highlight": true
+      },
+      {
+        "label": "{{yearsSincePlus:careerStartYear}}yr",
+        "sublabel": "Experience",
+        "highlight": false
+      },
+      {
+        "label": "50TB",
+        "sublabel": "Data Lake Migrated",
+        "highlight": false
+      }
+    ],
+    "quickStats": [
+      {
+        "value": "{{yearsSince:careerStartYear}}",
+        "suffix": "",
+        "label": "Years Experience"
+      },
+      {
+        "value": 62.5,
+        "suffix": "%",
+        "label": "Pipeline Speedup"
+      },
+      {
+        "value": "20+",
+        "suffix": "",
+        "label": "Zero-Rollback Releases"
+      }
+    ],
+    "badge": {
+      "value": "{{yearsSincePlus:careerStartYear}}",
+      "title": "Years Experience",
+      "subtitle": "Cloud Data Engineering"
+    }
+  },
+  "metrics": [
+    {
+      "label": "Pipeline Execution Time",
+      "value": 62.5,
+      "suffix": "%",
+      "description": "Reduction after migrating a 50TB Azure Databricks data lake to Unity Catalog on Medallion Architecture",
+      "max": 100,
+      "achievementId": "unity-catalog"
+    },
+    {
+      "label": "Production Defects",
+      "value": 98,
+      "suffix": "%",
+      "description": "Drop in production defects following the Bronze-Silver-Gold pipeline rebuild at Capgemini",
+      "max": 100,
+      "achievementId": "unity-catalog"
+    },
+    {
+      "label": "Schema Deployments",
+      "value": 20,
+      "suffix": "+",
+      "description": "Snowflake Raw / Business / Clean Vault releases across 5 insurance subject areas — zero rollbacks",
+      "max": 25,
+      "achievementId": "snowflake-vault"
+    },
+    {
+      "label": "ADF Pipelines Modernized",
+      "value": 100,
+      "suffix": "+",
+      "description": "Rewritten in PySpark and SQL — throughput up 40%, latency down 50% for retail analytics feeds",
+      "max": 120,
+      "achievementId": "adf-rewrite"
+    }
+  ],
+  "experience": [
+    {
+      "company": "EXL Services",
+      "role": "Senior Data Engineer",
+      "period": "Jul 2025 - Present",
+      "location": "Gurgaon / Pune, India",
+      "highlights": [
+        "Built Raw Vault, Business Vault, and Clean Vault schemas in Snowflake across 5 insurance subject areas, directly powering regulatory reporting and executive BI dashboards",
+        "Executed 20+ schema deployments across Dev, QA, and Production via Jenkins and GitHub using XML-based master changelogs — zero failed deployments across the full release cycle",
+        "Wrote shell scripts to pull source files from AWS S3 and load into Snowflake over SSH, eliminating per-environment manual config and improving deployment reliability by 100%",
+        "Standardised the release workflow across two parallel tracks (GOALD and NAVINS) in DBVisualizer, cutting validation cycles by 35%",
+        "Mentored 3 junior engineers on Data Vault 2.0 design patterns and enterprise release governance"
+      ],
+      "techStack": [
+        "Snowflake",
+        "Data Vault 2.0",
+        "Jenkins",
+        "AWS S3",
+        "DBVisualizer",
+        "Liquibase",
+        "Shell Scripting"
+      ]
+    },
+    {
+      "company": "Capgemini",
+      "role": "Associate Consultant – Data Engineer",
+      "period": "Nov 2023 - Jun 2025",
+      "location": "Gurgaon & Bengaluru, India",
+      "highlights": [
+        "Led Unity Catalog migration for a 50TB Azure Databricks data lake — rebuilt all pipelines on Medallion Architecture (Bronze-Silver-Gold); pipeline execution time dropped 62.5% and production defects fell 98%",
+        "Rewrote 100+ Azure Data Factory pipelines using PySpark and SQL — data throughput increased 40% and latency dropped 50% for time-critical retail analytics feeds",
+        "Owned 10+ end-to-end production releases on Azure DevOps — all on schedule, none rolled back, with multi-stage automated testing catching issues before production",
+        "Worked with onshore QA teams to sign off each release against data accuracy, integrity, and SLA criteria across global retail operations"
+      ],
+      "techStack": [
+        "Azure Databricks",
+        "Azure Data Factory",
+        "Unity Catalog",
+        "PySpark",
+        "Delta Lake",
+        "Azure DevOps"
+      ]
+    },
+    {
+      "company": "Capgemini",
+      "role": "Senior Analyst – Data Engineer",
+      "period": "Jul 2022 - Oct 2023",
+      "location": "Gurgaon, India",
+      "highlights": [
+        "First responder for P1 incidents — closed 95% within SLA through root-cause analysis and permanent fixes, holding platform uptime at 99.9% across retail data systems",
+        "Built regression test frameworks for ETL/ELT pipelines — post-release failures dropped 40% and unplanned downtime fell noticeably across Databricks and ADF workloads",
+        "Delivered Power BI dashboards and automated ETL reports that cut manual reporting effort by 40% and reduced BI request turnaround time by 45%"
+      ],
+      "techStack": [
+        "Azure Databricks",
+        "Azure Data Factory",
+        "PySpark",
+        "Power BI",
+        "SQL"
+      ]
+    },
+    {
+      "company": "Capgemini",
+      "role": "Data Engineering Intern",
+      "period": "Jan 2022 - Jun 2022",
+      "location": "Gurgaon, India",
+      "highlights": [
+        "Built Azure Data Factory pipelines for structured and semi-structured source data",
+        "Ran SQL-based data quality checks across Dev and UAT environments to support pipeline sign-off"
+      ],
+      "techStack": ["Azure Data Factory", "SQL"]
+    }
+  ],
+  "achievements": [
+    {
+      "id": "unity-catalog",
+      "title": "Unity Catalog Migration",
+      "category": "architecture",
+      "summary": "Led migration of a 50TB Azure Databricks data lake to Unity Catalog, rebuilding all pipelines on Medallion Architecture",
+      "impact": "Pipeline execution time dropped 62.5%; production defects fell 98%",
+      "details": [
+        "Rebuilt the entire pipeline estate on a Bronze-Silver-Gold Medallion Architecture",
+        "Migrated 50TB of production data with governance and lineage handled through Unity Catalog",
+        "Re-architected workloads to remove redundant transformations, cutting end-to-end execution time significantly",
+        "Coordinated with retail analytics teams to validate data accuracy across the new architecture"
+      ],
+      "metrics": [
+        { "label": "Data Migrated", "value": "50TB" },
+        { "label": "Execution Time", "value": "-62.5%" },
+        { "label": "Production Defects", "value": "-98%" }
+      ]
+    },
+    {
+      "id": "snowflake-vault",
+      "title": "Snowflake Data Vault 2.0 Release Governance",
+      "category": "leadership",
+      "summary": "Built Raw, Business, and Clean Vault schemas across 5 insurance subject areas powering regulatory reporting and BI dashboards",
+      "impact": "20+ schema deployments across Dev, QA, and Production with zero failed releases",
+      "details": [
+        "Designed Hub, Link, and Satellite structures for 5 distinct insurance subject areas",
+        "Ran 20+ Jenkins/GitHub-based deployments using XML master changelogs with zero rollbacks",
+        "Standardised release workflows across two parallel product tracks (GOALD and NAVINS), cutting validation cycles by 35%",
+        "Mentored 3 junior engineers on Data Vault 2.0 modeling and release governance"
+      ],
+      "metrics": [
+        { "label": "Deployments", "value": "20+" },
+        { "label": "Failed Releases", "value": "0" },
+        { "label": "Validation Cycle", "value": "-35%" }
+      ]
+    },
+    {
+      "id": "adf-rewrite",
+      "title": "ADF Pipeline Modernization",
+      "category": "performance",
+      "summary": "Rewrote 100+ Azure Data Factory pipelines using PySpark and SQL for retail analytics feeds",
+      "impact": "Data throughput increased 40%; latency dropped 50% for time-critical feeds",
+      "details": [
+        "Rebuilt over 100 ADF pipelines on a PySpark/SQL foundation as part of the Unity Catalog migration",
+        "Improved throughput by 40% for global retail analytics feeds",
+        "Cut end-to-end latency by 50% on time-critical reporting pipelines",
+        "Validated outputs with onshore QA teams against data accuracy, integrity, and SLA criteria"
+      ],
+      "metrics": [
+        { "label": "Pipelines Rewritten", "value": "100+" },
+        { "label": "Throughput", "value": "+40%" },
+        { "label": "Latency", "value": "-50%" }
+      ]
+    },
+    {
+      "id": "incident-response",
+      "title": "P1 Incident Response & Platform Reliability",
+      "category": "technical",
+      "summary": "First responder for P1 incidents on retail data systems, building regression test frameworks for ETL/ELT pipelines",
+      "impact": "95% of P1s closed within SLA; platform uptime held at 99.9%; post-release failures down 40%",
+      "details": [
+        "Acted as first responder for P1 incidents, performing root-cause analysis and permanent fixes",
+        "Built regression test frameworks covering ETL/ELT pipelines across Databricks and ADF",
+        "Held platform uptime at 99.9% across retail data systems while reducing unplanned downtime",
+        "Delivered automated ETL reports and Power BI dashboards, cutting manual reporting effort by 40%"
+      ],
+      "metrics": [
+        { "label": "SLA Compliance", "value": "95%" },
+        { "label": "Uptime", "value": "99.9%" },
+        { "label": "Post-Release Failures", "value": "-40%" }
+      ]
+    }
+  ],
+  "skillCategories": [
+    {
+      "name": "Cloud & Warehousing",
+      "skills": [
+        {
+          "name": "Azure Databricks",
+          "context": "Primary compute platform for Medallion Architecture pipelines and the 50TB Unity Catalog migration",
+          "aliases": ["databricks", "azure databricks"],
+          "weight": 10
+        },
+        {
+          "name": "Snowflake",
+          "context": "Raw/Business/Clean Vault schemas across 5 insurance subject areas at EXL",
+          "aliases": ["snowflake", "snowflake data cloud"],
+          "weight": 10
+        },
+        {
+          "name": "Unity Catalog",
+          "context": "Led governance and lineage migration for a 50TB Databricks data lake",
+          "aliases": ["unity catalog", "uc"],
+          "weight": 9
+        },
+        {
+          "name": "ADLS Gen2",
+          "context": "Storage layer for Medallion Architecture lakehouse pipelines",
+          "aliases": ["adls", "adls gen2", "data lake storage"],
+          "weight": 7
+        },
+        {
+          "name": "AWS S3",
+          "context": "Source file storage integrated with Snowflake load pipelines",
+          "aliases": ["s3", "aws s3"],
+          "weight": 6
+        }
+      ]
+    },
+    {
+      "name": "Data Architecture",
+      "skills": [
+        {
+          "name": "Data Vault 2.0",
+          "context": "Hubs, Links, and Satellites design for enterprise insurance data warehousing",
+          "aliases": ["data vault", "data vault 2.0", "dv2.0"],
+          "weight": 10
+        },
+        {
+          "name": "Medallion Architecture",
+          "context": "Bronze-Silver-Gold pipeline rebuild during the Unity Catalog migration",
+          "aliases": ["medallion", "bronze silver gold"],
+          "weight": 9
+        },
+        {
+          "name": "Dimensional Modeling",
+          "context": "Star schema design supporting BI and regulatory reporting",
+          "aliases": ["dimensional modeling", "star schema"],
+          "weight": 7
+        },
+        {
+          "name": "Star Schema",
+          "context": "Reporting layer modeling for executive BI dashboards",
+          "weight": 7
+        }
+      ]
+    },
+    {
+      "name": "Pipelines & Processing",
+      "skills": [
+        {
+          "name": "Azure Data Factory",
+          "context": "Rewrote 100+ pipelines using PySpark and SQL, improving throughput 40%",
+          "aliases": ["adf", "azure data factory"],
+          "weight": 9
+        },
+        {
+          "name": "PySpark",
+          "context": "Primary transformation language across Databricks and ADF pipelines",
+          "aliases": ["pyspark", "spark", "apache spark"],
+          "weight": 9
+        },
+        {
+          "name": "Delta Lake",
+          "context": "Storage format underpinning Medallion Architecture lakehouse tables",
+          "aliases": ["delta lake", "delta"],
+          "weight": 8
+        },
+        {
+          "name": "Apache Spark",
+          "context": "Batch and stream processing engine for large-scale data pipelines",
+          "aliases": ["spark", "apache spark"],
+          "weight": 8
+        },
+        {
+          "name": "Batch & Stream Processing",
+          "context": "Production data pipelines across retail and insurance domains",
+          "weight": 7
+        }
+      ]
+    },
+    {
+      "name": "Languages",
+      "skills": [
+        {
+          "name": "SQL",
+          "context": "Advanced SQL for ETL/ELT, Data Vault modeling, and regulatory reporting",
+          "aliases": ["sql"],
+          "weight": 9
+        },
+        {
+          "name": "Python",
+          "context": "Automation, ETL scripting, and data quality frameworks",
+          "aliases": ["python", "python3"],
+          "weight": 8
+        },
+        {
+          "name": "PySpark",
+          "context": "Distributed data processing across Databricks and ADF",
+          "aliases": ["pyspark"],
+          "weight": 9
+        },
+        {
+          "name": "Scala",
+          "context": "Spark job development for performance-critical pipelines",
+          "aliases": ["scala"],
+          "weight": 5
+        },
+        {
+          "name": "Shell Scripting",
+          "context": "Automated S3-to-Snowflake load scripts over SSH",
+          "aliases": ["shell", "bash", "shell scripting"],
+          "weight": 6
+        },
+        {
+          "name": "XML",
+          "context": "Master changelog definitions for Liquibase-based Snowflake deployments",
+          "aliases": ["xml"],
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "name": "DevOps & CI/CD",
+      "skills": [
+        {
+          "name": "Jenkins",
+          "context": "20+ Snowflake schema deployments across Dev, QA, and Production with zero rollbacks",
+          "aliases": ["jenkins"],
+          "weight": 8
+        },
+        {
+          "name": "Azure DevOps Pipelines",
+          "context": "Owned 10+ end-to-end production releases, all on schedule, none rolled back",
+          "aliases": ["azure devops", "azure devops pipelines"],
+          "weight": 8
+        },
+        {
+          "name": "GitHub Actions",
+          "context": "Schema deployment automation alongside Jenkins pipelines",
+          "aliases": ["github actions"],
+          "weight": 6
+        },
+        {
+          "name": "Git",
+          "context": "Version control across all engineering workflows",
+          "aliases": ["git"],
+          "weight": 7
+        },
+        {
+          "name": "Liquibase",
+          "context": "XML-based master changelogs for Snowflake schema releases",
+          "aliases": ["liquibase"],
+          "weight": 7
+        },
+        {
+          "name": "Automated Testing",
+          "context": "Regression test frameworks cutting post-release failures by 40%",
+          "weight": 7
+        }
+      ]
+    },
+    {
+      "name": "Governance & Quality",
+      "skills": [
+        {
+          "name": "Data Quality Frameworks",
+          "context": "Regression and validation frameworks across ETL/ELT pipelines",
+          "weight": 8
+        },
+        {
+          "name": "Audit Compliance",
+          "context": "Regulatory reporting support across insurance subject areas",
+          "weight": 6
+        },
+        {
+          "name": "Regulatory Reporting",
+          "context": "Raw/Business/Clean Vault schemas powering compliance reporting at EXL",
+          "weight": 7
+        },
+        {
+          "name": "Metadata Management",
+          "context": "Lineage and governance during the Unity Catalog migration",
+          "weight": 6
+        },
+        {
+          "name": "Power BI",
+          "context": "Executive dashboards cutting manual reporting effort by 40%",
+          "aliases": ["power bi", "powerbi"],
+          "weight": 6
+        }
+      ]
+    }
+  ],
+  "skillsSection": {
+    "eyebrow": "Technical Expertise",
+    "headline": "Skills & Technologies",
+    "description": "Deep expertise in Azure Databricks, Snowflake, and Data Vault 2.0 — from greenfield architecture to large-scale, zero-downtime migrations.",
+    "summary": [
+      { "title": "Data Vault 2.0", "subtitle": "Hubs, Links & Satellites" },
+      { "title": "Cloud Platforms", "subtitle": "Azure & Snowflake" },
+      { "title": "Certified", "subtitle": "Databricks & DP-203" }
+    ]
+  },
+  "certifications": [
+    {
+      "id": "databricks-data-engineer-professional",
+      "name": "Databricks Certified Data Engineer Professional",
+      "issuer": "Databricks",
+      "url": "https://credentials.databricks.com/fcba06ef-73f9-4a05-a258-00901dabb79c#acc.GhqxLS8T"
+    },
+    {
+      "id": "azure-data-engineer-dp203",
+      "name": "Microsoft Certified: Azure Data Engineer Associate (DP-203)",
+      "issuer": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/users/ireshagrawal-1361/credentials/e62b1e4e8ee38cf2"
+    },
+    {
+      "id": "azure-fundamentals-az900",
+      "name": "Microsoft Certified: Azure Fundamentals (AZ-900)",
+      "issuer": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/users/ireshagrawal-1361/credentials/974f69021b0da09d"
+    },
+    {
+      "id": "databricks-genai-fundamentals",
+      "name": "Generative AI Fundamentals",
+      "issuer": "Databricks",
+      "url": "https://credentials.databricks.com/ecb9e6b1-d9f8-46a9-ac93-bb97d90b6895#acc.B7EVyrFO"
+    },
+    {
+      "id": "microsoft-fabric-analytics-engineer",
+      "name": "Microsoft Certified: Fabric Analytics Engineer Associate",
+      "issuer": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/users/ireshagrawal-1361/credentials/fba4562dee33025f"
+    },
+    {
+      "id": "claude-certified-architect-foundations",
+      "name": "Claude Certified Architect - Foundations",
+      "issuer": "Anthropic",
+      "url": "https://www.credly.com/badges/1d8ac805-9770-4bbc-9d63-606d22223ebe/linked_in_profile"
+    }
+  ],
+  "certificationsSection": {
+    "eyebrow": "Credentials",
+    "headline": "Certifications",
+    "description": "Validated expertise across Databricks and Microsoft Azure's data engineering ecosystem."
+  },
+  "clients": {
+    "title": "Companies",
+    "display": "list",
+    "items": [
+      { "name": "EXL Services", "highlight": true },
+      { "name": "Capgemini", "highlight": true }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Get in Touch",
+    "headline": "Let's Connect",
+    "description": "Open to Senior Data Engineer roles, particularly around Azure Databricks, Snowflake, and Data Vault 2.0 platforms.",
+    "ctaText": "Open to relocation — let's discuss how I can help build or modernize your data platform.",
+    "location": "India — Open to Relocation (PAN India)",
+    "preferredMethod": "email",
+    "showSocial": true
+  },
+  "custom": []
+}

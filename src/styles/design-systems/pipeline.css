@@ -1,0 +1,149 @@
+/* ============================================================
+   Pipeline Design System
+   Data-console aesthetic for a senior data engineer portfolio.
+   Signature: IBM Plex Mono display type + status-green accent
+   + schema-object section labels + animated pipeline flow line.
+   All rules scoped to [data-design-system='pipeline'] to
+   prevent any cross-theme bleed.
+   ============================================================ */
+
+/* ── Text selection ─────────────────────────────────────── */
+[data-design-system='pipeline'] ::selection {
+  background: var(--color-accent);
+  color: var(--color-background);
+}
+
+/* ── Custom scrollbar (Webkit) ──────────────────────────── */
+[data-design-system='pipeline'] ::-webkit-scrollbar { width: 6px; }
+[data-design-system='pipeline'] ::-webkit-scrollbar-track { background: var(--color-background); }
+[data-design-system='pipeline'] ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+[data-design-system='pipeline'] ::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+
+/* ── Typography: IBM Plex Mono as display face ──────────── */
+[data-design-system='pipeline'] h1,
+[data-design-system='pipeline'] h2,
+[data-design-system='pipeline'] .font-display {
+  font-family: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
+  letter-spacing: -0.03em;
+}
+
+[data-design-system='pipeline'] .headline-editorial {
+  font-family: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+/* ── Section left-gutter rule (schema definition visual) ── */
+[data-design-system='pipeline'] section:not(#hero) {
+  border-left: 2px solid var(--color-border);
+  padding-left: max(1.5rem, env(safe-area-inset-left));
+  transition: border-color 0.4s ease;
+}
+[data-design-system='pipeline'] section:not(#hero):hover {
+  border-left-color: var(--color-accent);
+}
+@media (max-width: 640px) {
+  [data-design-system='pipeline'] section:not(#hero) {
+    border-left: none;
+    padding-left: 1rem;
+  }
+}
+
+/* ── Pipeline flow-line: the signature animation ─────────── */
+/* A thin line that sweeps left→right across the top of each
+   section when it enters the viewport, evoking a pipeline run.
+   Triggered by [data-pipeline-active] set via usePipelineReveal. */
+[data-design-system='pipeline'] .pipeline-flow-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-accent) 30%,
+    var(--color-pipeline-blue, #5b8def) 70%,
+    transparent 100%
+  );
+  transition: width 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+[data-design-system='pipeline'] [data-pipeline-active] .pipeline-flow-line {
+  width: 100%;
+}
+
+/* ── Scroll-reveal fade-up ──────────────────────────────── */
+[data-design-system='pipeline'] .pipeline-reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+[data-design-system='pipeline'] .pipeline-reveal.pipeline-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-design-system='pipeline'] .pipeline-reveal--delay-1 { transition-delay: 0.05s; }
+[data-design-system='pipeline'] .pipeline-reveal--delay-2 { transition-delay: 0.10s; }
+[data-design-system='pipeline'] .pipeline-reveal--delay-3 { transition-delay: 0.15s; }
+[data-design-system='pipeline'] .pipeline-reveal--delay-4 { transition-delay: 0.20s; }
+
+/* ── Hero terminal cursor blink ─────────────────────────── */
+[data-design-system='pipeline'] .pipeline-cursor::after {
+  content: '▋';
+  color: var(--color-accent);
+  animation: pipeline-blink 1.1s step-end infinite;
+  font-weight: 400;
+  margin-left: 2px;
+  font-size: 0.85em;
+  vertical-align: baseline;
+}
+
+@keyframes pipeline-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Card hover ─────────────────────────────────────────── */
+[data-design-system='pipeline'] .card:hover,
+[data-design-system='pipeline'] [data-hoverable]:hover {
+  border-color: color-mix(in oklab, var(--color-accent) 40%, var(--color-border));
+}
+
+/* ── Focus ring: green not default browser blue ─────────── */
+[data-design-system='pipeline'] *:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ── Nav: mono font ─────────────────────────────────────── */
+[data-design-system='pipeline'] nav a {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+
+/* ── prefers-reduced-motion: disable ALL animations ─────── */
+@media (prefers-reduced-motion: reduce) {
+  [data-design-system='pipeline'] .pipeline-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  [data-design-system='pipeline'] .pipeline-flow-line {
+    transition: none;
+    width: 100%;
+  }
+  [data-design-system='pipeline'] .pipeline-cursor::after {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+/* ── Print safety ────────────────────────────────────────── */
+@media print {
+  [data-design-system='pipeline'] section { border-left: 1px solid #ccc !important; }
+  [data-design-system='pipeline'] .pipeline-flow-line,
+  [data-design-system='pipeline'] .pipeline-cursor::after { display: none !important; }
+}

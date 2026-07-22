@@ -1,0 +1,4 @@
+# SPA fallback — all routes serve index.html so React Router handles them.
+# Vercel uses vercel.json for this; this file is a belt-and-suspenders
+# fallback for Netlify or similar hosts if you ever switch.
+/*    /index.html    200
